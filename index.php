@@ -30,6 +30,7 @@
         }
     </style>
 </head>
+   
 
 <body>
     <div class="col bg-color">
