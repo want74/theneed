@@ -13,32 +13,48 @@
     <title>Hello, The Need</title>
     <style>
         .bg-color {
-            background: #121212;
+            background: #2F2FA2;
         }
 
         .bg-icon {
             background-image: url(img/z.png);
+            background-repeat: no-repeat;
+            background-position: center center;
             background-size: cover;
-            background-size: 100% 100%;
+            height: 600px;
         }
 
         .h1-color {
             color: #FFFFFF;
         }
+
         .p-color {
             color: #C4C4C4;
         }
+
+        .button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            width: 303px;
+            height: 45px;
+            /* серый кнопка unactive */
+            background: #BDBDBD;
+            border-radius: 15px;
+        }
     </style>
 </head>
-   
+
 
 <body>
-    <div class="col bg-color">
-        <div class="row pb-5 pt-5">
-            <div class="col-10 mx-auto border">
-                <div class="row">
+    <div class="col bg-color " style="height:1000px;">
+        <div class="row">
+            <div class="col-10 mx-auto border ">
+                <div class="row ">
                     <div class="col-6">
-                        <div class="col-10 mx-auto bg-icon d-flex" style="height: 500px;">
+                        <div class="col-10 mx-auto  bg-icon d-flex ">
                             <div class="row my-auto">
                                 <div class="col">
 
@@ -47,15 +63,34 @@
                                     </h1>
 
                                     <p class="h1-color">
-                                        The need
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 3
                                     </p>
+                                    <div class="row mt-5">
+                                        <form action="go.php">
+                                            <button class="button">
+                                                вход
+                                            </button>
+                                        </form>
+                                        <form action="reg.php">
+                                            <button class="button">
+                                                регистрация
+                                            </button>
+                                        </form>
+
+                                    </div>
 
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 pt-5 pb-5 border">
-
+                    <div class="col-6">
+                        <div class="col-10 mx-auto d-flex ">
+                            <div class="row my-auto">
+                                <div class="col">
+                                    <img src="img/ris.png" alt="">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
