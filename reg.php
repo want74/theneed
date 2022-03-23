@@ -2,6 +2,18 @@
 <html lang="кг">
 
 <head>
+    <!-- manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Montserrat:wght@800&family=Poppins:wght@600&display=swap"
+        rel="stylesheet">
+    <!-- exo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo:wght@600&family=Manrope:wght@700&family=Montserrat:wght@800&family=Poppins:wght@600&display=swap"
+        rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -27,7 +39,7 @@
         }
 
         h1 {
-            font-family: 'DM Sans';
+            font-family: 'Exo';
             font-style: normal;
             font-weight: 700;
             font-size: 34px;
@@ -38,7 +50,7 @@
         }
 
         .slogan {
-            font-family: 'DM Sans';
+            font-family: 'Exo';
             font-style: normal;
             font-weight: 400;
             font-size: 18px;
@@ -72,6 +84,7 @@
             background-position: 95%;
             /*Позиционируем*/
         }
+
         .phone {
             background-image: url("./img/phone.svg");
             background-repeat: no-repeat;
@@ -173,8 +186,7 @@
                                             placeholder="Введите номер телефона">
                                     </div>
                                     <div class="row mb-4">
-                                        <input type="" name="name" class="form-control w-100 man"
-                                            placeholder="Логин">
+                                        <input type="" name="name" class="form-control w-100 man" placeholder="Логин">
                                     </div>
                                     <div class="row my-2">
                                         <input type="password" name="password" class="form-control w-100 lock"
@@ -182,7 +194,7 @@
                                     </div>
                                     <div class="row mt-5">
                                         <button class="btn">
-                                            ЗАГЕРИСТРИРОВАТЬСЯ 
+                                            ЗАГЕРИСТРИРОВАТЬСЯ
                                         </button>
                                     </div>
                                     <!--<div class="row mt-5">

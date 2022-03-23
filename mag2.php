@@ -2,7 +2,7 @@
 session_start();
 include "connect.php";
 $query1 = mysqli_query($con, "SELECT * FROM store WHERE id='".$_POST["id"]."'");
-$query = mysqli_query($con, "SELECT * FROM store ");
+$query = mysqli_query($con, "SELECT * FROM tovars ");
 $stroka1 = $query1->fetch_assoc();
 ?>
 
@@ -11,6 +11,18 @@ $stroka1 = $query1->fetch_assoc();
 <html lang="ru">
 
 <head>
+    <!-- manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Montserrat:wght@800&family=Poppins:wght@600&display=swap"
+        rel="stylesheet">
+    <!-- exo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo:wght@600&family=Manrope:wght@700&family=Montserrat:wght@800&family=Poppins:wght@600&display=swap"
+        rel="stylesheet">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,6 +34,13 @@ $stroka1 = $query1->fetch_assoc();
     <style>
         .head-color {
             background: #242582;
+
+        }
+
+        .card-color {
+            background: rgba(237, 236, 236, 0.78);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 20px;
 
         }
 
@@ -124,9 +143,54 @@ $stroka1 = $query1->fetch_assoc();
             color: #FFFFFF;
         }
 
+        .p3 {
+            font-family: 'Exo';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 17px;
+            line-height: 20px;
+            /* identical to box height, or 154% */
+
+            text-align: center;
+
+            /* Фирменный цвет 2 */
+
+            color: #553D67;
+        }
+
+        .p4 {
+            font-family: 'Exo';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 17px;
+
+            /* identical to box height, or 154% */
+
+            text-align: center;
+
+            /* Фирменный цвет 3 АКЦЕНТ */
+
+            color: #F64C72;
+        }
+
+        .p5 {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+
+            /* identical to box height, or 154% */
+
+            text-align: center;
+
+            /* шрифт НЕ важный */
+
+            color: #FFFFFF;
+        }
+
 
         .cards {
-            background: #FFFFFF;
+            background: rgba(237, 236, 236, 0.78);
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             border-radius: 20px;
         }
@@ -159,6 +223,11 @@ $stroka1 = $query1->fetch_assoc();
             border-radius: 10px;
 
         }
+
+        .fill {
+            background: rgba(0, 203, 32, 0.59);
+            border-radius: 15px;
+        }
     </style>
 </head>
 
@@ -183,14 +252,14 @@ $stroka1 = $query1->fetch_assoc();
     </div>
     <div class="col-10 mx-auto">
         <div class="row">
-            <div class="col-3 pt-5 pb-5 border mt-5">
+            <div class="col-3">
                 <div class="row">
-                    <div class="col-12 cardss">
+                    <div class="col-12 cardss pt-5 pb-5 mt-5">
                         <div class="row">
                             <div class="col-10 mx-auto">
-                                <h2 class="text-center">ИНКОТРЕЙД</h2>
-                                <p class="p2 text-center">​Торговые ряды Сэргэ​улица Красильникова, 3д</p>
-                                <p class="p2 text-center">Сегодня с 09:00 до 20:00</p>
+                                <h2 class="text-center"><?php echo $stroka1['title']?></h2>
+                                <p class="p2 text-center">​<?php echo $stroka1['adress']?></p>
+                                <p class="p2 text-center"><?php echo $stroka1['time']?></p>
                                 <button class="btn1 btn form-control pt-1 pb-1 mt-5">
                                     <div class="row">
                                         <div class="col-1 my-auto">
@@ -205,54 +274,76 @@ $stroka1 = $query1->fetch_assoc();
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-9 pt-5 pb-5 ">
+                <div class="col-10 pt-2 pb-2 ">
+                    <div class="row mt-5 ">
+                        <div class="borders col-5 ml-3">
+                            <h1 class="">Фильтры</h1>
+                        </div>
+                    </div>
+                    <div class="row mt-5 ">
+                        <div class="borders col-10 ml-3">
+                            <h1 class="">По стоимости</h1>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    <p class="p1">от большей к меньшей</p>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    <p class="p1">от меньшей к большей</p>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    <p class="p1">товары с уценкой</p>
+                                </label>
+                            </div>
+                        </div>
 
-                <div class="row pb-5">
+                    </div>
+                    <div class="row mt-5 ">
+                        <div class="borders col-10 ml-3">
+                            <h1 class="">По рейтенгу</h1>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    <p class="p1">По возростанию</p>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    <p class="p1">По убыванию</p>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-9 ">
+
+                <div class="row ">
                     <?php
                 for($i=0;$i<mysqli_num_rows($query);$i++){
                 $stroka = $query->fetch_assoc();
                 ?>
-                    <div class="col-3 border cards pt-3 pb-3 mx-auto">
-                        <div class="pb-5 pt-5 head-color border">
-                            <h2 class="text-center"><?php echo $stroka['title']; ?></h2>
-                        </div>
-                        <div class="">
-                            <p class="p3"><?php echo $stroka['adress']; ?></p>
-                            <p class="p3"><?php echo $stroka['time']; ?></p>
-                            <div class="d-flex">
-                                <img src="img/phone2.svg" alt="">
-                                <p class="p3"><?php echo $stroka['phone']; ?></p>
-                            </div>
-
-                        </div>
-                        <div class="row ">
-                            <div class="col-10">
-                                <div class="d-flex">
-                                    <button class="btn1 btn form-control pt-1 pb-1">
-                                        <div class="row">
-                                            <div class="col-1 my-auto">
-                                                <img src="img/box.svg" alt="">
-                                            </div>
-                                            <div class="col-8 mt-2 ">
-                                                <h3>ПОСМОТРЕТЬ НА КАРТЕ</h3>
-                                            </div>
-                                        </div>
-
-
-
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-1">
-                                <div class="d-flex">
-                                    <button class="btn2 btn form-control pt-3 pb-3 pr-3 pl-3 ">
-                                        <img src="img/poloski.svg" alt="">
-
-                                    </button>
-                                </div>
+                    <div class="col-3 cards pt-3 pb-3 card-color ml-5 mt-5">
+                        <p class="text-center"><img src="<?php echo $stroka['img']?>" class="card-img-top mx-auto mt-3"
+                                style="width:90%;"></p>
+                        <p class="p3"><?php echo $stroka['title']; ?></p>
+                        <p class="p4"><?php echo $stroka['price']; ?></p>
+                        <div class="row">
+                            <div class="fill col-6 mx-auto">
+                                <p class="p5 text-center mt-2">
+                                    В НАЛИЧИИ: <?php echo $stroka['number']?>
+                                </p>
                             </div>
                         </div>
+
                     </div>
                     <?php } ?>
 
