@@ -55,10 +55,15 @@
         }
 
         .lol {
+            font-family: 'Exo';
             font-style: normal;
             font-weight: 400;
-            font-size: 22px;
+            font-size: 28px;
             line-height: 37px;
+            display: flex;
+            align-items: center;
+
+            color: #C4C4C4;
         }
 
         h1 {
