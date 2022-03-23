@@ -218,7 +218,7 @@ $query = mysqli_query($con, "SELECT * FROM store");
                         <div class="row ">
                             <div class="col-12 ">
                                 <div class="d-flex">
-                                    <form class="mx-auto" action="mag2.php" method="POST">
+                                    <form class="mx-auto" action="mag2.php">
                                         <button class="btn1 btn form-control pt-1 pb-1 ">
                                             <div class="row">
                                                 <div class="col-1 my-auto">
@@ -228,7 +228,7 @@ $query = mysqli_query($con, "SELECT * FROM store");
                                                     <h3>ПОДРОБНЕЕ</h3>
                                                 </div>
                                             </div>
-                                            <input class="d-none" type="" name="id"
+                                            <input class="d-none" type="" name="store_id"
                                                 value="<?php echo $stroka['id'] ;?>">
                                         </button>
                                     </form>

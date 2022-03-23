@@ -1,8 +1,8 @@
 <?php
 session_start();
 include "connect.php";
-$query1 = mysqli_query($con, "SELECT * FROM store WHERE id='".$_POST["id"]."'");
-$query = mysqli_query($con, "SELECT * FROM tovars ");
+$query1 = mysqli_query($con, "SELECT * FROM store WHERE id='".$_GET["store_id"]."'");
+$query = mysqli_query($con, "SELECT * FROM tovars WHERE store_id='".$_GET["store_id"]."'");
 $stroka1 = $query1->fetch_assoc();
 ?>
 
@@ -243,9 +243,10 @@ $stroka1 = $query1->fetch_assoc();
                     </div>
                     <div class="col-1">
                         <div class="row" style="height: 100%;">
-                            <p class="lol text-center my-auto">О нас</p>
+                            <a class="lol text-center my-auto" href="mag.php">Магазины</a>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -259,21 +260,26 @@ $stroka1 = $query1->fetch_assoc();
                             <div class="col-10 mx-auto">
                                 <h2 class="text-center"><?php echo $stroka1['title']?></h2>
                                 <p class="p2 text-center">​<?php echo $stroka1['adress']?></p>
-                                <p class="p2 text-center"><?php echo $stroka1['time']?></p>
-                                <button class="btn1 btn form-control pt-1 pb-1 mt-5">
-                                    <div class="row">
-                                        <div class="col-1 my-auto">
-                                            <img src="img/box.svg" alt="">
+                                <p class="p2 text-center"><?php echo $stroka1['time']?></p>                                
+                                <p class="p2 text-center"><?php echo $stroka1['phone']?></p>
+                                <form action="dist.php">
+                                    <button class="btn1 btn form-control pt-1 pb-1 mt-5">
+                                        <div class="row">
+                                            <div class="col-1 my-auto">
+                                                <img src="img/box.svg" alt="">
+                                            </div>
+                                            <div class="col-8 mt-2 ">
+                                                <h3>ПОСМОТРЕТЬ НА КАРТЕ</h3>
+                                            </div>
                                         </div>
-                                        <div class="col-8 mt-2 ">
-                                            <h3>ПОСМОТРЕТЬ НА КАРТЕ</h3>
-                                        </div>
-                                    </div>
-                                </button>
+                                    </button>
+                                </form>
+
                             </div>
                         </div>
                     </div>
                 </div>
+                <!--
                 <div class="col-10 pt-2 pb-2 ">
                     <div class="row mt-5 ">
                         <div class="borders col-5 ml-3">
@@ -322,7 +328,7 @@ $stroka1 = $query1->fetch_assoc();
                         </div>
 
                     </div>
-                </div>
+                </div>-->
             </div>
             <div class="col-9 ">
 

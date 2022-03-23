@@ -7,7 +7,7 @@ session_start();
 	$stroka=$query->fetch_assoc();
 	if (mysqli_num_rows($query)>0) {
 		$_SESSION['id']=$stroka['compid'];
-		header('location: main.php');
+		header('location: dist.php');
 	}
 	else{
 		header('location: go.php');

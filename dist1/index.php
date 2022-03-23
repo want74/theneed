@@ -104,7 +104,7 @@
                 pane: 'pane_opt_2',
                 radius: 9.6,
                 opacity: 1,
-                color: 'rgba(246,76,114,1.0)',
+                color: 'rgba(47,47,162,1.0)',//опт
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
@@ -150,7 +150,7 @@
                 pane: 'pane_prod_3',
                 radius: 9.600000000000001,
                 opacity: 1,
-                color: 'rgba(47,47,162,1.0)',
+                color: 'rgba(246,76,114,1.0)',//прод
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
