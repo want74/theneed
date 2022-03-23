@@ -17,11 +17,21 @@
         }
 
         .bg-icon {
-            background-image: url(img/z.png);
+            background-image: url(img/z.svg);
+            background-repeat: no-repeat;
+            background-position: left left;
+            background-size: 75% 100%;
+            height: 600px;
+
+        }
+
+        .bg-icon2 {
+            background-image: url(img/ris.svg);
             background-repeat: no-repeat;
             background-position: center center;
-            background-size: cover;
+            background-size: 90% 100%;
             height: 600px;
+
         }
 
         .h1-color {
@@ -29,7 +39,7 @@
         }
 
         .p-color {
-            color: #C4C4C4;
+            color: #FFFFFF;
         }
 
         .button {
@@ -37,45 +47,73 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            padding: 10px;
-            width: 303px;
-            height: 45px;
             /* серый кнопка unactive */
-            background: #BDBDBD;
+            background: #F64C72;
             border-radius: 15px;
+            border: none;
+            line-height: 24px;
+        }
+
+        .lol {
+            font-family: 'Exo';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 37px;
+            display: flex;
+            align-items: center;
+
+            color: #C4C4C4;
+        }
+
+        h1 {
+            font-weight: 800;
+            font-size: 58px;
+            line-height: 85px;
+        }
+
+        .s {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 24px;
         }
     </style>
 </head>
 
 
 <body>
-    <div class="col bg-color " style="height:1000px;">
-        <div class="row">
-            <div class="col-10 mx-auto border ">
+    <div class="col bg-color d-flex" style="height:100vh;">
+        <div class="row my-auto" style="width: 100vw;">
+            <div class="col-10 mx-auto ">
                 <div class="row ">
                     <div class="col-6">
                         <div class="col-10 mx-auto  bg-icon d-flex ">
-                            <div class="row my-auto">
+                            <div class="row my-auto mx-auto" style="width:100%;">
                                 <div class="col">
 
                                     <h1 class="h1-color">
                                         The need
                                     </h1>
 
-                                    <p class="h1-color">
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 3
+                                    <p class="p-color lol">
+                                        Найдите то, что вам нужно по самой лучшей цене
                                     </p>
-                                    <div class="row mt-5">
-                                        <form action="go.php">
-                                            <button class="button">
-                                                вход
-                                            </button>
-                                        </form>
-                                        <form action="reg.php">
-                                            <button class="button">
-                                                регистрация
-                                            </button>
-                                        </form>
+                                    <div class="row mt-5 pt-5 pb-5">
+                                        <div class="col-6 mx-auto">
+                                            <form action="go.php">
+                                                <button class="button p-color form-control s">
+                                                    вход
+                                                </button>
+                                            </form>
+                                        </div>
+                                        <div class="col-6 mx-auto">
+                                            <form action="reg.php">
+                                                <button class="button p-color form-control s">
+                                                    регистрация
+                                                </button>
+                                            </form>
+                                        </div>
+
 
                                     </div>
 
@@ -84,10 +122,10 @@
                         </div>
                     </div>
                     <div class="col-6">
-                        <div class="col-10 mx-auto d-flex ">
-                            <div class="row my-auto">
-                                <div class="col">
-                                    <img src="img/ris.png" alt="">
+                        <div class="col-10 mx-auto">
+                            <div class="row">
+                                <div class="col bg-icon2">
+
                                 </div>
                             </div>
                         </div>
