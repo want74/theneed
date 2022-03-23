@@ -13,49 +13,122 @@
     <title>Hello, The Need</title>
     <style>
         .bg-color {
-            background: #121212;
+            background: #2F2FA2;
         }
 
         .bg-icon {
-            background-image: url(img/z.png);
-            background-size: cover;
-            background-size: 100% 100%;
+            background-image: url(img/z.svg);
+            background-repeat: no-repeat;
+            background-position: left left;
+            background-size: 75% 100%;
+            height: 600px;
+
+        }
+
+        .bg-icon2 {
+            background-image: url(img/ris.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 90% 100%;
+            height: 600px;
+
         }
 
         .h1-color {
             color: #FFFFFF;
         }
+
         .p-color {
+            color: #FFFFFF;
+        }
+
+        .button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            /* серый кнопка unactive */
+            background: #F64C72;
+            border-radius: 15px;
+            border: none;
+            line-height: 24px;
+        }
+
+        .lol {
+            font-family: 'Exo';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 37px;
+            display: flex;
+            align-items: center;
+
             color: #C4C4C4;
+        }
+
+        h1 {
+            font-weight: 800;
+            font-size: 58px;
+            line-height: 85px;
+        }
+
+        .s {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 24px;
         }
     </style>
 </head>
-   
+
 
 <body>
-    <div class="col bg-color">
-        <div class="row pb-5 pt-5">
-            <div class="col-10 mx-auto border">
-                <div class="row">
+    <div class="col bg-color d-flex" style="height:100vh;">
+        <div class="row my-auto" style="width: 100vw;">
+            <div class="col-10 mx-auto ">
+                <div class="row ">
                     <div class="col-6">
-                        <div class="col-10 mx-auto bg-icon d-flex" style="height: 500px;">
-                            <div class="row my-auto">
+                        <div class="col-10 mx-auto  bg-icon d-flex ">
+                            <div class="row my-auto mx-auto" style="width:100%;">
                                 <div class="col">
 
                                     <h1 class="h1-color">
                                         The need
                                     </h1>
 
-                                    <p class="h1-color">
-                                        The need
+                                    <p class="p-color lol">
+                                        Найдите то, что вам нужно по самой лучшей цене
                                     </p>
+                                    <div class="row mt-5 pt-5 pb-5">
+                                        <div class="col-6 mx-auto">
+                                            <form action="go.php">
+                                                <button class="button p-color form-control s">
+                                                    вход
+                                                </button>
+                                            </form>
+                                        </div>
+                                        <div class="col-6 mx-auto">
+                                            <form action="reg.php">
+                                                <button class="button p-color form-control s">
+                                                    регистрация
+                                                </button>
+                                            </form>
+                                        </div>
+
+
+                                    </div>
 
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 pt-5 pb-5 border">
+                    <div class="col-6">
+                        <div class="col-10 mx-auto">
+                            <div class="row">
+                                <div class="col bg-icon2">
 
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
