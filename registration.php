@@ -109,12 +109,12 @@
                         <!--Первая строка с заголовком-->
                         <div class="row" style="margin-top:25vh;">
                             <h1>
-                                Войти
+                                Регистрация
                             </h1>
                         </div>
                         <div class="row" style="margin-top:1vh;">
                             <p class="slogan">
-                                Выполните вход в свой личный кабинет
+                                Создайте свой личный кабинет для легкой работы
                             </p>
                         </div>
                         <div class="row">
@@ -130,7 +130,7 @@
                                     </div>
                                     <div class="row mt-5">
                                         <button class="btn">
-                                            ВОЙТИ
+                                            ЗАРЕГЕСТРИРОВАТЬСЯ
                                         </button>
                                     </div>
                                 </div>
