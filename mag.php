@@ -9,6 +9,19 @@ $query = mysqli_query($con, "SELECT * FROM store");
 <html lang="ru">
 
 <head>
+    <!-- manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Montserrat:wght@800&family=Poppins:wght@600&display=swap"
+        rel="stylesheet">
+    <!-- exo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo:wght@600&family=Manrope:wght@700&family=Montserrat:wght@800&family=Poppins:wght@600&display=swap"
+        rel="stylesheet">
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,6 +29,7 @@ $query = mysqli_query($con, "SELECT * FROM store");
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 
     <style>
         .head-color {
@@ -171,78 +185,21 @@ $query = mysqli_query($con, "SELECT * FROM store");
                             <p class="lol text-center my-auto">О нас</p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
     <div class="col-10 mx-auto">
         <div class="row">
-            <div class="col-3 pt-5 pb-5 border">
+            <div class="col-10 mx-auto">
+
                 <div class="row">
-                    <div class="col-11">
-                        <form class="">
-                            <input class="form-control nav" type="search" placeholder="Поиск">
-                        </form>
-                    </div>
-
-                </div>
-                <div class="row mt-5 ">
-                    <div class="borders col-5 ml-3">
-                        <h1 class="">Фильтры</h1>
-                    </div>
-
-                </div>
-                <div class="row mt-5 ">
-                    <div class="borders col-10 ml-3">
-                        <h1 class="">По стоимости</h1>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                <p class="p1">от большей к меньшей</p>
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                <p class="p1">от меньшей к большей</p>
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                <p class="p1">товары с уценкой</p>
-                            </label>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row mt-5 ">
-                    <div class="borders col-10 ml-3">
-                        <h1 class="">По рейтенгу</h1>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                <p class="p1">По возростанию</p>
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                <p class="p1">По убыванию</p>
-                            </label>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-9 pt-5 pb-5 ">
-
-                <div class="row pb-5">
                     <?php
                 for($i=0;$i<mysqli_num_rows($query);$i++){
                 $stroka = $query->fetch_assoc();
                 ?>
-                    <div class="col-3 border cards pt-3 pb-3 mx-auto">
+                    <div class="col-3 border cards pt-3 pb-3 ml-5 mt-5">
                         <div class="pb-5 pt-5 head-color border">
                             <h2 class="text-center"><?php echo $stroka['title']; ?></h2>
                         </div>
@@ -250,36 +207,32 @@ $query = mysqli_query($con, "SELECT * FROM store");
                             <p class="p2"><?php echo $stroka['adress']; ?></p>
                             <p class="p2"><?php echo $stroka['time']; ?></p>
                             <div class="d-flex">
-                                <img src="img/phone2.svg" alt="">
-                                <p class="p2"><?php echo $stroka['phone']; ?></p>
+                                <img src="img/phone2.svg" class="mb-3" alt="">
+                                <div class="">
+                                    <p class="p2"><?php echo $stroka['phone']; ?></p>
+                                </div>
+
                             </div>
 
                         </div>
                         <div class="row ">
-                            <div class="col-10">
+                            <div class="col-12 ">
                                 <div class="d-flex">
-                                    <form action="mag2.php" method="POST">
-                                        <button class="btn1 btn form-control pt-1 pb-1">
+                                    <form class="mx-auto" action="mag2.php" method="POST">
+                                        <button class="btn1 btn form-control pt-1 pb-1 ">
                                             <div class="row">
                                                 <div class="col-1 my-auto">
-                                                    <img src="img/box.svg" alt="">
+                                                    <img src="img/poloski.svg" alt="">
                                                 </div>
                                                 <div class="col-8 mt-2 ">
-                                                    <h3>ПОСМОТРЕТЬ НА КАРТЕ</h3>
+                                                    <h3>ПОДРОБНЕЕ</h3>
                                                 </div>
                                             </div>
-                                            <input class="d-none" type="" name="id" value="<?php echo $stroka['id'] ;?>">
+                                            <input class="d-none" type="" name="id"
+                                                value="<?php echo $stroka['id'] ;?>">
                                         </button>
                                     </form>
 
-                                </div>
-                            </div>
-                            <div class="col-1">
-                                <div class="d-flex">
-                                    <button class="btn2 btn form-control pt-3 pb-3 pr-3 pl-3 ">
-                                        <img src="img/poloski.svg" alt="">
-
-                                    </button>
                                 </div>
                             </div>
                         </div>
