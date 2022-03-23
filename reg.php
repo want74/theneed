@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
-    <title>Регистрация</title>
+    <title>Войти</title>
 
     <style>
         /*Стили для правой первой колонки1*/
         .bg-color {
             background: #2F2FA2;
+            background-image: url(img/Cells.svg);
         }
 
         .rightbg {
@@ -32,10 +33,7 @@
             font-size: 34px;
             line-height: 46px;
             /* or 135% */
-
-
-            /* Neutral/800 */
-
+            text-align: center;
             color: #FFFFFF;
         }
 
@@ -46,6 +44,7 @@
             font-size: 18px;
             line-height: 30px;
             color: #FFFFFF;
+            text-align: center;
         }
 
         input {
@@ -68,6 +67,13 @@
 
         .man {
             background-image: url("./img/man.svg");
+            background-repeat: no-repeat;
+            /*Убираем повтор изображения*/
+            background-position: 95%;
+            /*Позиционируем*/
+        }
+        .phone {
+            background-image: url("./img/phone.svg");
             background-repeat: no-repeat;
             /*Убираем повтор изображения*/
             background-position: 95%;
@@ -124,6 +130,7 @@
             height: 2px;
             /* Толщина линии */
         }
+
         .bg-icon2 {
             background-image: url(img/z2.svg);
             background-repeat: no-repeat;
@@ -136,28 +143,38 @@
 </head>
 
 <body class="bg-color">
-    <div class="col ">
-        <div class="row">
-            <div class="col-5">
-                <div class="row">
+    <div class="col">
+        <div class="row" style="height: 100vh;">
+            <div class="col-5 d-flex mx-auto">
+                <div class="row my-auto" style="width:50vw;">
                     <div class="col-9" style="margin-left:100px;">
                         <!--Первая строка с заголовком-->
-                        <div class="row" style="margin-top:10vh; ">
-                            <h1>
-                                Регистрация
-                            </h1>
+                        <div class="row ">
+                            <div class="col-8 mx-auto ">
+                                <h1 class="">
+                                    Регистрация
+                                </h1>
+                            </div>
+
                         </div>
                         <div class="row" style="margin-top:1vh;">
-                            <p class="slogan">
-                                Создай свой личный кабинет для легкой работы
-                            </p>
+                            <div class="col-8 mx-auto ">
+                                <p class="slogan">
+                                    Создай свой личный кабинет для легкой работы
+                                </p>
+                            </div>
+
                         </div>
                         <div class="row">
-                            <form action="" class="d-flex w-75">
+                            <form action="insert.php" method="POST" class="d-flex w-75 mx-auto">
                                 <div class="col">
                                     <div class="row mb-4">
-                                        <input type="number" name="number" class="form-control man "
+                                        <input type="number" name="phone" class="form-control phone "
                                             placeholder="Введите номер телефона">
+                                    </div>
+                                    <div class="row mb-4">
+                                        <input type="" name="name" class="form-control w-100 man"
+                                            placeholder="Логин">
                                     </div>
                                     <div class="row my-2">
                                         <input type="password" name="password" class="form-control w-100 lock"
@@ -165,7 +182,7 @@
                                     </div>
                                     <div class="row mt-5">
                                         <button class="btn">
-                                            ВОЙТИ
+                                            ЗАГЕРИСТРИРОВАТЬСЯ 
                                         </button>
                                     </div>
                                     <!--<div class="row mt-5">
@@ -181,15 +198,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="col-10 mx-auto">
-                    <div class="row">
-                        <div class="col bg-icon2">
 
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
 
     </div>

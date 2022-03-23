@@ -14,6 +14,7 @@
         /*Стили для правой первой колонки1*/
         .bg-color {
             background: #2F2FA2;
+            background-image: url(img/Cells.svg);
         }
 
         .rightbg {
@@ -32,10 +33,7 @@
             font-size: 34px;
             line-height: 46px;
             /* or 135% */
-
-
-            /* Neutral/800 */
-
+            text-align: center;
             color: #FFFFFF;
         }
 
@@ -46,6 +44,7 @@
             font-size: 18px;
             line-height: 30px;
             color: #FFFFFF;
+            text-align: center;
         }
 
         input {
@@ -68,6 +67,13 @@
 
         .man {
             background-image: url("./img/man.svg");
+            background-repeat: no-repeat;
+            /*Убираем повтор изображения*/
+            background-position: 95%;
+            /*Позиционируем*/
+        }
+        .phone {
+            background-image: url("./img/phone.svg");
             background-repeat: no-repeat;
             /*Убираем повтор изображения*/
             background-position: 95%;
@@ -137,27 +143,33 @@
 </head>
 
 <body class="bg-color">
-    <div class="col ">
+    <div class="col">
         <div class="row" style="height: 100vh;">
-            <div class="col-5 d-flex">
+            <div class="col-5 d-flex mx-auto">
                 <div class="row my-auto" style="width:50vw;">
                     <div class="col-9" style="margin-left:100px;">
                         <!--Первая строка с заголовком-->
-                        <div class="row" style="">
-                            <h1>
-                                Войти
-                            </h1>
+                        <div class="row ">
+                            <div class="col-8 mx-auto ">
+                                <h1 class="">
+                                    Войти
+                                </h1>
+                            </div>
+
                         </div>
                         <div class="row" style="margin-top:1vh;">
-                            <p class="slogan">
-                                Выполните вход в свой личный кабинет
-                            </p>
+                            <div class="col-8 mx-auto ">
+                                <p class="slogan">
+                                    Выполните вход в свой личный кабинет
+                                </p>
+                            </div>
+
                         </div>
                         <div class="row">
-                            <form action="" class="d-flex w-75">
+                            <form action="check.php" method="POST" class="d-flex w-75 mx-auto">
                                 <div class="col">
                                     <div class="row mb-4">
-                                        <input type="number" name="number" class="form-control man "
+                                        <input type="number" name="phone" class="form-control phone "
                                             placeholder="Введите номер телефона">
                                     </div>
                                     <div class="row my-2">
@@ -182,17 +194,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="row">
-                    <div class="col-10 mx-auto d-flex" style="height: 100vh;">
-                        <div class="row my-auto" style="width: 50vw;">
-                            <div class="col bg-icon2">
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
 
     </div>
