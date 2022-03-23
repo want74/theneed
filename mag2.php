@@ -1,7 +1,9 @@
 <?php
 session_start();
 include "connect.php";
-$query = mysqli_query($con, "SELECT * FROM store");
+$query1 = mysqli_query($con, "SELECT * FROM store WHERE id='".$_POST["id"]."'");
+$query = mysqli_query($con, "SELECT * FROM store ");
+$stroka1 = $query1->fetch_assoc();
 ?>
 
 
@@ -81,7 +83,6 @@ $query = mysqli_query($con, "SELECT * FROM store");
             font-size: 13px;
             line-height: 20px;
             /* identical to box height, or 154% */
-
             text-align: center;
 
             /* шрифт НЕ важный */
@@ -115,13 +116,12 @@ $query = mysqli_query($con, "SELECT * FROM store");
             font-style: normal;
             font-weight: 500;
             font-size: 18px;
-
             /* identical to box height, or 418% */
 
 
-            /* шрифт header */
+            /* шрифт НЕ важный */
 
-            color: rgba(60, 60, 67, 0.6);
+            color: #FFFFFF;
         }
 
 
@@ -153,6 +153,12 @@ $query = mysqli_query($con, "SELECT * FROM store");
 
 
         }
+
+        .cardss {
+            background: #242582;
+            border-radius: 10px;
+
+        }
     </style>
 </head>
 
@@ -177,62 +183,27 @@ $query = mysqli_query($con, "SELECT * FROM store");
     </div>
     <div class="col-10 mx-auto">
         <div class="row">
-            <div class="col-3 pt-5 pb-5 border">
+            <div class="col-3 pt-5 pb-5 border mt-5">
                 <div class="row">
-                    <div class="col-11">
-                        <form class="">
-                            <input class="form-control nav" type="search" placeholder="Поиск">
-                        </form>
-                    </div>
-
-                </div>
-                <div class="row mt-5 ">
-                    <div class="borders col-5 ml-3">
-                        <h1 class="">Фильтры</h1>
-                    </div>
-
-                </div>
-                <div class="row mt-5 ">
-                    <div class="borders col-10 ml-3">
-                        <h1 class="">По стоимости</h1>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                <p class="p1">от большей к меньшей</p>
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                <p class="p1">от меньшей к большей</p>
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                <p class="p1">товары с уценкой</p>
-                            </label>
+                    <div class="col-12 cardss">
+                        <div class="row">
+                            <div class="col-10 mx-auto">
+                                <h2 class="text-center">ИНКОТРЕЙД</h2>
+                                <p class="p2 text-center">​Торговые ряды Сэргэ​улица Красильникова, 3д</p>
+                                <p class="p2 text-center">Сегодня с 09:00 до 20:00</p>
+                                <button class="btn1 btn form-control pt-1 pb-1 mt-5">
+                                    <div class="row">
+                                        <div class="col-1 my-auto">
+                                            <img src="img/box.svg" alt="">
+                                        </div>
+                                        <div class="col-8 mt-2 ">
+                                            <h3>ПОСМОТРЕТЬ НА КАРТЕ</h3>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
                         </div>
                     </div>
-
-                </div>
-                <div class="row mt-5 ">
-                    <div class="borders col-10 ml-3">
-                        <h1 class="">По рейтенгу</h1>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                <p class="p1">По возростанию</p>
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                <p class="p1">По убыванию</p>
-                            </label>
-                        </div>
-                    </div>
-
                 </div>
             </div>
             <div class="col-9 pt-5 pb-5 ">
@@ -247,31 +218,30 @@ $query = mysqli_query($con, "SELECT * FROM store");
                             <h2 class="text-center"><?php echo $stroka['title']; ?></h2>
                         </div>
                         <div class="">
-                            <p class="p2"><?php echo $stroka['adress']; ?></p>
-                            <p class="p2"><?php echo $stroka['time']; ?></p>
+                            <p class="p3"><?php echo $stroka['adress']; ?></p>
+                            <p class="p3"><?php echo $stroka['time']; ?></p>
                             <div class="d-flex">
                                 <img src="img/phone2.svg" alt="">
-                                <p class="p2"><?php echo $stroka['phone']; ?></p>
+                                <p class="p3"><?php echo $stroka['phone']; ?></p>
                             </div>
 
                         </div>
                         <div class="row ">
                             <div class="col-10">
                                 <div class="d-flex">
-                                    <form action="mag2.php" method="POST">
-                                        <button class="btn1 btn form-control pt-1 pb-1">
-                                            <div class="row">
-                                                <div class="col-1 my-auto">
-                                                    <img src="img/box.svg" alt="">
-                                                </div>
-                                                <div class="col-8 mt-2 ">
-                                                    <h3>ПОСМОТРЕТЬ НА КАРТЕ</h3>
-                                                </div>
+                                    <button class="btn1 btn form-control pt-1 pb-1">
+                                        <div class="row">
+                                            <div class="col-1 my-auto">
+                                                <img src="img/box.svg" alt="">
                                             </div>
-                                            <input class="d-none" type="" name="id" value="<?php echo $stroka['id'] ;?>">
-                                        </button>
-                                    </form>
+                                            <div class="col-8 mt-2 ">
+                                                <h3>ПОСМОТРЕТЬ НА КАРТЕ</h3>
+                                            </div>
+                                        </div>
 
+
+
+                                    </button>
                                 </div>
                             </div>
                             <div class="col-1">
