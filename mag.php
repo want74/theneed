@@ -180,11 +180,6 @@ $query = mysqli_query($con, "SELECT * FROM store");
                             <img src="img/iconka.svg" class="my-auto">
                         </div>
                     </div>
-                    <div class="col-1">
-                        <div class="row" style="height: 100%;">
-                            <p class="lol text-center my-auto">О нас</p>
-                        </div>
-                    </div>
 
                 </div>
             </div>
