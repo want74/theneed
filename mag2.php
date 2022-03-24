@@ -279,56 +279,7 @@ $stroka1 = $query1->fetch_assoc();
                         </div>
                     </div>
                 </div>
-                <!--
-                <div class="col-10 pt-2 pb-2 ">
-                    <div class="row mt-5 ">
-                        <div class="borders col-5 ml-3">
-                            <h1 class="">Фильтры</h1>
-                        </div>
-                    </div>
-                    <div class="row mt-5 ">
-                        <div class="borders col-10 ml-3">
-                            <h1 class="">По стоимости</h1>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    <p class="p1">от большей к меньшей</p>
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    <p class="p1">от меньшей к большей</p>
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    <p class="p1">товары с уценкой</p>
-                                </label>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="row mt-5 ">
-                        <div class="borders col-10 ml-3">
-                            <h1 class="">По рейтенгу</h1>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    <p class="p1">По возростанию</p>
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    <p class="p1">По убыванию</p>
-                                </label>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>-->
+               
             </div>
             <div class="col-9 ">
 
