@@ -39,7 +39,7 @@
         }
 
         h1 {
-            font-family: 'DM Sans';
+            font-family: 'Exo';
             font-style: normal;
             font-weight: 700;
             font-size: 34px;
@@ -50,7 +50,7 @@
         }
 
         .slogan {
-            font-family: 'DM Sans';
+            font-family: 'Exo';
             font-style: normal;
             font-weight: 400;
             font-size: 18px;
@@ -165,7 +165,7 @@
                         <div class="row ">
                             <div class="col-8 mx-auto ">
                                 <h1 class="">
-                                    Войти
+                                    Регистрация
                                 </h1>
                             </div>
 
@@ -173,17 +173,20 @@
                         <div class="row" style="margin-top:1vh;">
                             <div class="col-8 mx-auto ">
                                 <p class="slogan">
-                                    Выполните вход в свой личный кабинет
+                                    Создай свой личный кабинет для легкой работы
                                 </p>
                             </div>
 
                         </div>
                         <div class="row">
-                            <form action="check.php" method="POST" class="d-flex w-75 mx-auto">
+                            <form action="insert.php" method="POST" class="d-flex w-75 mx-auto">
                                 <div class="col">
                                     <div class="row mb-4">
                                         <input type="number" name="phone" class="form-control phone "
                                             placeholder="Введите номер телефона">
+                                    </div>
+                                    <div class="row mb-4">
+                                        <input type="" name="name" class="form-control w-100 man" placeholder="Логин">
                                     </div>
                                     <div class="row my-2">
                                         <input type="password" name="password" class="form-control w-100 lock"
@@ -191,7 +194,7 @@
                                     </div>
                                     <div class="row mt-5">
                                         <button class="btn">
-                                            ВОЙТИ
+                                            ЗАГЕРИСТРИРОВАТЬСЯ
                                         </button>
                                     </div>
                                     <!--<div class="row mt-5">
